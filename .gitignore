@@ -1,0 +1,4 @@
+# Project exclude paths
+/walblog-admin/target/
+/walblog-blog/target/
+/walblog-framework/target/

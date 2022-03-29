@@ -1,0 +1,28 @@
+server:
+  port: 7777
+
+spring:
+  # 数据库连接
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/wal_blog?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    servlet:
+      multipart:
+        max-file-size: 2MB
+        max-request-size: 5MB
+  redis:
+    host: 192.168.16.133
+    password: Wal..2021
+
+mybatis-plus:
+  configuration:
+    # 日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: delFlag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      id-type: auto
