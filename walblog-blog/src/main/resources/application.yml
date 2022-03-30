@@ -16,6 +16,12 @@ spring:
     host: 192.168.16.133
     password: Wal..2021
 
+oss:
+  #自己填写
+  accessKey:
+  secretKey:
+  bucket: wal-blog
+
 mybatis-plus:
   configuration:
     # 日志

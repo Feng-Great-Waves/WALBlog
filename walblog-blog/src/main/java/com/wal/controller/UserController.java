@@ -1,11 +1,10 @@
 package com.wal.controller;
 
 import com.wal.domain.ResponseResult;
+import com.wal.domain.entity.User;
 import com.wal.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author fwt
@@ -23,4 +22,13 @@ public class UserController {
     public ResponseResult userInfo(){
         return userService.userInfo();
     }
+    @PutMapping("/userInfo")
+    public ResponseResult updateUserInfo(@RequestBody User user){
+        return userService.updateUserInfo(user);
+    }
+    @PostMapping("/register")
+    public ResponseResult register(@RequestBody User user){
+        return userService.register(user);
+    }
+
 }

@@ -14,4 +14,8 @@ import com.wal.domain.entity.User;
 public interface UserService extends IService<User> {
 
     ResponseResult userInfo();
+
+    ResponseResult register(User user);
+
+    ResponseResult updateUserInfo(User user);
 }
