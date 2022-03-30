@@ -1,5 +1,6 @@
 package com.wal.controller;
 
+import com.wal.annotation.SystemLog;
 import com.wal.domain.ResponseResult;
 import com.wal.domain.entity.User;
 import com.wal.service.UserService;
@@ -22,6 +23,8 @@ public class UserController {
     public ResponseResult userInfo(){
         return userService.userInfo();
     }
+
+    @SystemLog(businessName = "更新用户信息")
     @PutMapping("/userInfo")
     public ResponseResult updateUserInfo(@RequestBody User user){
         return userService.updateUserInfo(user);
